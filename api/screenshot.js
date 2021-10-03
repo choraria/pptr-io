@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
 
     let urlToScreenshot;;
     try {
-      urlToScreenshot = new URL(req.query.url);
+      urlToScreenshot = new URL({ toString: () => req.query.url });
     } catch (e) {
       res.statusCode = 400;
       res.json({
