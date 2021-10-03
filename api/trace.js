@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
       ignoreHTTPSErrors: true,
     });
     const page = await browser.newPage();
-    const trace = `${url.hostname.replace(".",/-/g)}.json`;
+    const trace = `${url.hostname.replace(".",/\-/g)}.json`;
     await page.tracing.start({ path: trace, screenshots: true });
 
     await page.goto(url, {
