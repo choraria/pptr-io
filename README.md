@@ -1,24 +1,30 @@
-# pptr-io
+# pptr.io
 
 a free and open-source api that runs [puppeteer](https://developers.google.com/web/tools/puppeteer) as a service — powered by [vercel](https://vercel.com/).
 
-# Table of Contents
+# table of contents
 
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Credits](#credits)
-- [License](#license)
+- [usage](#usage)
+    - [endpoints](#endpoints)
+        1. [screenshot](#screenshot)
+        2. [metrics](#metrics)
+- [contributing](#contributing)
+- [credits](#credits)
+- [license](#license)
 
-# Usage
+# usage
 
 - base url: `https://pptr.io/`
 - default path: `api/`
 - endpoint: any one of the individual `.js` files in the [api](/api) folder
     - ignore the `index.js` file inside the `api` folder
 
-## Endpoints
+## endpoints
 
-1. [screenshot.js](/api/screenshot.js)
+### screenshot
+[source](/api/screenshot.js)
+
+makes use of the [page.screenshot](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagescreenshotoptions) method to take a screenshot of the page.
 
 ![GET Request](https://img.shields.io/badge/REQUEST-GET-GREEN) `https://pptr.io/api/screenshot?url=https://google.com/`
 
@@ -29,7 +35,10 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 
 </details>
 
-2. [metrics.js](/api/metrics.js)
+### metrics
+[source](/api/metrics.js)
+
+makes use of the [page.metrics](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagemetrics) method to fetch metrics of the page.
 
 ![GET Request](https://img.shields.io/badge/REQUEST-GET-GREEN) `https://pptr.io/api/metrics?url=https://google.com/`
 
@@ -56,17 +65,22 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 
 </details>
 
-# Contributing
+# contributing
 
-TBD
+## create new endpoints
+
+## update exsting services
+
+## improve homepage
+
 
 # Credits
 
 0. if it weren't for jarrod overson's [videos](https://www.youtube.com/channel/UCJbZGfomrHtwpdjrARoMVaA/search?query=Puppeteer), i might've probably not gotten the courage to start working with puppeteer.
 1. props to the original idea via [pptraas.com](https://github.com/GoogleChromeLabs/pptraas.com) — although, i like my current domain name just the same ;)
-2. huge thanks to [Salma | @whitep4nth3r](https://twitter.com/whitep4nth3r) for sharing insights on the [puppeteer<>vercel](https://www.contentful.com/blog/2021/03/17/puppeteer-node-open-graph-screenshot-for-socials/) blog post.
+2. huge thanks to [Salma | @whitep4nth3r](https://twitter.com/whitep4nth3r) for sharing insights on the [puppeteer <> vercel](https://www.contentful.com/blog/2021/03/17/puppeteer-node-open-graph-screenshot-for-socials/) blog post.
 
-# License
+# license
 
 MIT License
 
