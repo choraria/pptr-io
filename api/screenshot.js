@@ -1,9 +1,20 @@
 const puppeteer = require("puppeteer-core");
 const chrome = require("chrome-aws-lambda");
+const url = require('url');
 
 module.exports = async (req, res) => {
   try {
-    const url = req.query.url;
+
+    let urlToScreenshot;;
+    try {
+      urlToScreenshot = new URL(req.query.url);
+    } catch (e) {
+      res.statusCode = 400;
+      res.json({
+        error: "Invalid URL"
+      });
+    }
+
     const browser = await puppeteer.launch({
       args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
       defaultViewport: chrome.defaultViewport,
@@ -13,12 +24,12 @@ module.exports = async (req, res) => {
     const page = await browser.newPage();
     
     await page.setViewport({
-      width: 1280,
-      height: 1024,
+      width: 1920,
+      height: 1080,
       deviceScaleFactor: 1,
     });
 
-    await page.goto(url, {
+    await page.goto(urlToScreenshot, {
       waitUntil: 'networkidle2',
     });
     const file = await page.screenshot({
