@@ -69,12 +69,7 @@ makes use of the [page.metrics](https://github.com/puppeteer/puppeteer/blob/main
 
 # contributing
 
-## create new endpoints
-
-## update exsting services
-
-## improve homepage
-
+TBD
 
 # Credits
 
