@@ -1,1 +1,3 @@
-module.exports = 'Hello world';
+module.exports = async (req, res) => {
+    res.redirect('/');
+}
