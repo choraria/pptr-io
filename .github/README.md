@@ -22,7 +22,6 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 ## endpoints
 
 ### screenshot
-[source](/api/screenshot.js)
 
 makes use of the [page.screenshot](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagescreenshotoptions) method to take a screenshot of the page.
 
@@ -35,8 +34,9 @@ makes use of the [page.screenshot](https://github.com/puppeteer/puppeteer/blob/m
 
 </details>
 
+[check source code](/api/screenshot.js)
+
 ### metrics
-[source](/api/metrics.js)
 
 makes use of the [page.metrics](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagemetrics) method to fetch metrics of the page.
 
@@ -64,6 +64,8 @@ makes use of the [page.metrics](https://github.com/puppeteer/puppeteer/blob/main
 ```
 
 </details>
+
+[check source code](/api/metrics.js)
 
 # contributing
 
