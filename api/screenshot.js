@@ -1,6 +1,5 @@
 const puppeteer = require("puppeteer-core");
 const chrome = require("chrome-aws-lambda");
-// const url = require('url');
 
 module.exports = async (req, res) => {
   try {
@@ -13,7 +12,6 @@ module.exports = async (req, res) => {
       res.json({
         error: "Invalid URL"
       });
-      res.end();
     }
 
     const browser = await puppeteer.launch({
