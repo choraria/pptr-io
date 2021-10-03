@@ -31,9 +31,11 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 
 ### screenshot
 
-makes use of the [page.screenshot](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagescreenshotoptions) method to take a screenshot of the page.
-
-![GET Request](https://img.shields.io/badge/REQUEST-GET-GREEN) `https://pptr.io/api/screenshot?url=https://google.com/`
+- task: takes a screenshot of the input url
+- class: [page.screenshot](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagescreenshotoptions)
+- method: `GET`
+- api: `https://pptr.io/api/screenshot?url=https://google.com/`
+- source: [screenshot.js](/api/screenshot.js)
 
 <details>
 <summary>sample output of the screenshot endpoint</summary>
@@ -42,13 +44,13 @@ makes use of the [page.screenshot](https://github.com/puppeteer/puppeteer/blob/m
 
 </details>
 
-[check source code](/api/screenshot.js)
-
 ### metrics
 
-makes use of the [page.metrics](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagemetrics) method to fetch metrics of the page.
-
-![GET Request](https://img.shields.io/badge/REQUEST-GET-GREEN) `https://pptr.io/api/metrics?url=https://google.com/`
+- task: fetch metrics of the page
+- class: [page.metrics](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagemetrics)
+- method: `GET`
+- api: `https://pptr.io/api/metrics?url=https://google.com/`
+- source: [screenshot.js](/api/metrics.js)
 
 <details>
 <summary>sample output of the metrics endpoint</summary>
@@ -72,8 +74,6 @@ makes use of the [page.metrics](https://github.com/puppeteer/puppeteer/blob/main
 ```
 
 </details>
-
-[check source code](/api/metrics.js)
 
 # contributing
 
