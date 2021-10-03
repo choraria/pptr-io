@@ -5,9 +5,8 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 # table of contents
 
 - [usage](#usage)
-    - [endpoints](#endpoints)
-        1. [screenshot](#screenshot)
-        2. [metrics](#metrics)
+    1. [screenshot](#screenshot)
+    2. [metrics](#metrics)
 - [contributing](#contributing)
 - [credits](#credits)
 - [license](#license)
