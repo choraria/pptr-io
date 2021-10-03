@@ -50,7 +50,7 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 - class: [page.metrics](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagemetrics)
 - method: `GET`
 - api: `https://pptr.io/api/metrics?url=https://google.com/`
-- source: [screenshot.js](/api/metrics.js)
+- source: [metrics.js](/api/metrics.js)
 
 <details>
 <summary>sample output of the metrics endpoint</summary>
