@@ -3,14 +3,13 @@ const chrome = require("chrome-aws-lambda");
 
 module.exports = async (req, res) => {
   try {
-
-    let urlToScreenshot;;
+    let url;
     try {
-      urlToScreenshot = new URL({ toString: () => req.query.url });
+      url = new URL({ toString: () => req.query.url });
     } catch (e) {
       res.statusCode = 400;
       res.json({
-        error: "Invalid URL"
+        error: "Invalid URL",
       });
     }
 
@@ -22,8 +21,8 @@ module.exports = async (req, res) => {
     });
     const page = await browser.newPage();
 
-    await page.goto(urlToScreenshot, {
-      waitUntil: 'networkidle2',
+    await page.goto(url, {
+      waitUntil: "networkidle2",
     });
     const metrics = await page.metrics();
     await browser.close();
@@ -31,7 +30,6 @@ module.exports = async (req, res) => {
     res.statusCode = 200;
     res.setHeader("Content-Type", `application/json`);
     res.end(JSON.stringify(metrics));
-    
   } catch (err) {
     console.log(err);
     res.statusCode = 500;
