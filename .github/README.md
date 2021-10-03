@@ -18,6 +18,7 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 - [contributing](#contributing)
 - [credits](#credits)
 - [license](#license)
+- [host your own](#host-your-own)
 
 # usage
 
@@ -114,3 +115,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+# host your own
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fchoraria%2Fpptr-io)
