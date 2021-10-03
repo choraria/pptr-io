@@ -8,8 +8,11 @@ In this guide you will get an overview of the contribution workflow from opening
 
 Use the table of contents icon on the top left corner of the this document to get to a specific section of this guide quickly.
 
-## create new endpoints
+# how to contribute
 
-## update exsting services
-
-## improve homepage
+1. Create a new issue describing what you have in mind.
+    - Challenge / Problem statement
+    - Proposed approach on solution
+2. The repo owner will engage you and help validate the idea
+3. Once everything is agreed upon, feel free to frok the repo and start building your solution
+4. Finally, create a new pull request with the accepted, proposed changes

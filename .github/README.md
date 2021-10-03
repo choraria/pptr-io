@@ -76,7 +76,12 @@ makes use of the [page.metrics](https://github.com/puppeteer/puppeteer/blob/main
 
 # contributing
 
-TBD
+1. Create a new issue describing what you have in mind.
+    - Challenge / Problem statement
+    - Proposed approach on solution
+2. The repo owner will engage you and help validate the idea
+3. Once everything is agreed upon, feel free to frok the repo and start building your solution
+4. Finally, create a new pull request with the accepted, proposed changes
 
 # credits
 
@@ -86,6 +91,7 @@ TBD
 
 # license
 
+```
 MIT License
 
 Copyright (c) 2021 Sourabh Choraria
@@ -107,3 +113,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
