@@ -15,10 +15,12 @@ module.exports = async (req, res) => {
     await page.setViewport({
       width: 1280,
       height: 1024,
-      deviceScaleFactor: 2,
+      deviceScaleFactor: 1,
     });
 
-    await page.goto(url);
+    await page.goto(url, {
+      waitUntil: 'networkidle2',
+    });
     const file = await page.screenshot({
       type: "png",
     });
