@@ -1,6 +1,14 @@
-# pptr.io
+<div align="center" >
 
-a free and open-source api that runs [puppeteer](https://developers.google.com/web/tools/puppeteer) as a service — powered by [vercel](https://vercel.com/).
+<h1>pptr.io</h1>
+
+a free and open-source api that runs [puppeteer](https://developers.google.com/web/tools/puppeteer) as a service.
+
+![License](https://img.shields.io/github/license/choraria/pptr-io) ![vercel](https://img.shields.io/github/deployments/choraria/pptr-io/production?label=vercel&logo=vercel) ![puppeteer-core](https://img.shields.io/github/package-json/dependency-version/choraria/pptr-io/puppeteer-core) ![chrome-aws-lambda](https://img.shields.io/github/package-json/dependency-version/choraria/pptr-io/chrome-aws-lambda) ![twitter](https://img.shields.io/twitter/follow/schoraria911?label=%40schoraria911&style=social)
+
+![powered by vercel](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)
+
+</div>
 
 # table of contents
 
