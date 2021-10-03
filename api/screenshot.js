@@ -13,9 +13,9 @@ module.exports = async (req, res) => {
     const page = await browser.newPage();
     
     await page.setViewport({
-      width: 1920,
-      height: 1080,
-      deviceScaleFactor: 1,
+      width: 1280,
+      height: 1024,
+      deviceScaleFactor: 2,
     });
 
     await page.goto(url);
@@ -27,6 +27,7 @@ module.exports = async (req, res) => {
     res.statusCode = 200;
     res.setHeader("Content-Type", `image/png`);
     res.end(file);
+    
   } catch (err) {
     console.log(err);
     res.statusCode = 500;
