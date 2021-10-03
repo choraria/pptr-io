@@ -1,14 +1,5 @@
-let chrome = {};
-let puppeteer;
-
-if (process.env.AWS_LAMBDA_FUNCTION_VERSION) {
-  // running on the Vercel platform.
-  chrome = require("chrome-aws-lambda");
-  puppeteer = require("puppeteer-core");
-} else {
-  // running locally.
-  puppeteer = require("puppeteer");
-}
+const puppeteer = require("puppeteer-core");
+const chrome = require("chrome-aws-lambda");
 
 module.exports = async (req, res) => {
   try {
@@ -20,6 +11,13 @@ module.exports = async (req, res) => {
       ignoreHTTPSErrors: true,
     });
     const page = await browser.newPage();
+    
+    await page.setViewport({
+      width: 1920,
+      height: 1080,
+      deviceScaleFactor: 1,
+    });
+
     await page.goto(url);
     const file = await page.screenshot({
       type: "png",
