@@ -4,9 +4,9 @@
 
 a free and open-source api that runs [puppeteer](https://developers.google.com/web/tools/puppeteer) as a service.
 
-![License](https://img.shields.io/github/license/choraria/pptr-io) ![vercel](https://img.shields.io/github/deployments/choraria/pptr-io/production?label=vercel&logo=vercel) ![puppeteer-core](https://img.shields.io/github/package-json/dependency-version/choraria/pptr-io/puppeteer-core) ![chrome-aws-lambda](https://img.shields.io/github/package-json/dependency-version/choraria/pptr-io/chrome-aws-lambda) ![twitter](https://img.shields.io/twitter/follow/schoraria911?label=%40schoraria911&style=social)
+[![License](https://img.shields.io/github/license/choraria/pptr-io)](https://github.com/choraria/pptr-io/blob/main/LICENSE) [![vercel](https://img.shields.io/github/deployments/choraria/pptr-io/production?label=vercel&logo=vercel)](https://github.com/choraria/pptr-io/deployments/activity_log?environment=Production) [![puppeteer-core](https://img.shields.io/github/package-json/dependency-version/choraria/pptr-io/puppeteer-core)](https://www.npmjs.com/package/puppeteer-core) [![chrome-aws-lambda](https://img.shields.io/github/package-json/dependency-version/choraria/pptr-io/chrome-aws-lambda)](https://www.npmjs.com/package/chrome-aws-lambda) [![twitter](https://img.shields.io/twitter/follow/schoraria911?label=%40schoraria911&style=social)](https://twitter.com/intent/user?screen_name=schoraria911)
 
-![powered by vercel](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)
+[![powered by vercel](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)](https://vercel.com?utm_source=pptr-io&utm_campaign=oss)
 
 </div>
 
