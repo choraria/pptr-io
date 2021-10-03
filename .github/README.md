@@ -70,7 +70,7 @@ makes use of the [page.metrics](https://github.com/puppeteer/puppeteer/blob/main
 
 TBD
 
-# Credits
+# credits
 
 0. if it weren't for jarrod overson's [videos](https://www.youtube.com/channel/UCJbZGfomrHtwpdjrARoMVaA/search?query=Puppeteer), i might've probably not gotten the courage to start working with puppeteer.
 1. props to the original idea via [pptraas.com](https://github.com/GoogleChromeLabs/pptraas.com) — although, i like my current domain name just the same ;)
