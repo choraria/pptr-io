@@ -1,5 +1,6 @@
 const puppeteer = require("puppeteer-core");
 const chrome = require("chrome-aws-lambda");
+const fs = require("fs");
 
 module.exports = async (req, res) => {
   try {
@@ -33,10 +34,9 @@ module.exports = async (req, res) => {
 
     res.statusCode = 200;
     res.setHeader("Content-Type", `application/json`);
-    res.writeHead(200, {
-      "Content-Type": "application/json",
+    res.json({
+      trace: fs.readFileSync(trace, "utf8"),
     });
-    res.end(trace);
   } catch (err) {
     console.log(err);
     res.statusCode = 500;
