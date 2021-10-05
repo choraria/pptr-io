@@ -33,7 +33,10 @@ module.exports = async (req, res) => {
 
     res.statusCode = 200;
     res.setHeader("Content-Type", `application/json`);
-    res.type('application/json').sendFile(trace);
+    res.writeHead(200, {
+      "Content-Type": "application/json",
+    });
+    res.end(trace);
   } catch (err) {
     console.log(err);
     res.statusCode = 500;
