@@ -37,13 +37,13 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 - api: `https://pptr.io/api/screenshot?url=https://google.com/`
 - source: [screenshot.js](/api/screenshot.js)
 
-| parameter | type | description | default |
+| optional params | type | description | default |
 | --- | --- | --- | --- |
-| `width` | number | width of the screenshot. | 1920 |
-| `height` | number | height of the screenshot. | 1080 |
-| `deviceScaleFactor` | number | device scale factor (can be thought of as DPR). | 1 |
-| `fullPage` | boolean | when `true`, takes a screenshot of the full scrollable page. | false |
-| `type` | string | can be either `jpeg`, `png` or `webp`. | png |
+| `width` | number | width of the screenshot. | `1920` |
+| `height` | number | height of the screenshot. | `1080` |
+| `deviceScaleFactor` | number | device scale factor (can be thought of as DPR). | `1` |
+| `fullPage` | boolean | when `true`, takes a screenshot of the full scrollable page. | `false` |
+| `type` | string | can be either `jpeg`, `png` or `webp`. | `png` |
 
 <details>
 <summary>sample output of the screenshot endpoint</summary>
