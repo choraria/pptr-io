@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
         error: "Invalid URL",
       });
     }
-    const fullPage =  typeof req.query.fullPage == "boolean" ? req.query.fullPage : false;
+    const fullPage =  req.query.fullPage.toString().toLowerCase() == "true" ? true : false;
     const screenshotFileType = req.query.type;
     const fileType = ALLOWED_FILE_TYPES.includes(screenshotFileType) ? screenshotFileType : "png";
 
