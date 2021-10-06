@@ -15,7 +15,7 @@ module.exports = async (req, res) => {
       });
     }
     const fullPage =  req.query.fullPage.toString().toLowerCase() == "true" ? true : false;
-    const screenshotFileType = req.query.type.toLowerCase();
+    const screenshotFileType = req.query.type;
     const fileType = ALLOWED_FILE_TYPES.includes(screenshotFileType) ? screenshotFileType : "png";
 
     const browser = await puppeteer.launch({
