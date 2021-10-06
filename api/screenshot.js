@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer-core");
 const chrome = require("chrome-aws-lambda");
 const { merge, toBoolean } = require("../helpers/helpers");
 
-const DEFAULT_VIEWPORT = { height: 1920, width: 1080, deviceScaleFactor: 1 };
+const DEFAULT_VIEWPORT = { height: 1080, width: 1920, deviceScaleFactor: 1 };
 const ALLOWED_FILE_TYPES = ["jpeg", "webp", "png"];
 const DEFAULT_FILE_TYPE = "png";
 
