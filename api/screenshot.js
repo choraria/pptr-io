@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
     await page.setViewport({
       width: Number(req.query.width) || 1920,
       height: Number(req.query.height) || 1080,
-      deviceScaleFactor: Number(req.query.scaleFactor) || 1,
+      deviceScaleFactor: Number(req.query.deviceScaleFactor) || 1,
     });
 
     await page.goto(url, {
