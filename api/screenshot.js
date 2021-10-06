@@ -1,5 +1,10 @@
 const puppeteer = require("puppeteer-core");
 const chrome = require("chrome-aws-lambda");
+const { merge } = require("../helpers/helpers");
+
+const DEFAULT_VIEWPORT = { height: 1920, width: 1080, deviceScaleFactor: 1 };
+const ALLOWED_FILE_TYPES = ["jpeg", "webp", "png"];
+const DEFAULT_FILE_TYPE = "png";
 
 module.exports = async (req, res) => {
   try {
@@ -12,7 +17,19 @@ module.exports = async (req, res) => {
         error: "Invalid URL",
       });
     }
-
+    const fullPage = toBoolean(req.query.fullPage);
+    const screenshotFileType = req.query.screenshotFileType;
+    if (screenshotFileType && !ALLOWED_FILE_TYPES.includes(screenshotFileType)) {
+      res.json({
+        error: "invalid file type requested",
+      });
+    }
+    const userViewPortInputParams = {
+      height: Number(req.query.height),
+      width: Number(req.query.width),
+      deviceScaleFactor: Number(req.query.deviceScaleFactor),
+    };
+    const viewPortParams = merge(DEFAULT_VIEWPORT, userViewPortInputParams);
     const browser = await puppeteer.launch({
       args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
       defaultViewport: chrome.defaultViewport,
@@ -21,22 +38,19 @@ module.exports = async (req, res) => {
     });
     const page = await browser.newPage();
 
-    await page.setViewport({
-      width: 1920,
-      height: 1080,
-      deviceScaleFactor: 1,
-    });
+    await page.setViewport(viewPortParams);
 
     await page.goto(url, {
       waitUntil: "networkidle2",
     });
     const file = await page.screenshot({
-      type: "png",
+      type: screenshotFileType || DEFAULT_FILE_TYPE,
+      fullPage: fullPage,
     });
     await browser.close();
 
     res.statusCode = 200;
-    res.setHeader("Content-Type", `image/png`);
+    res.setHeader("Content-Type", `image/${screenshotFileType || DEFAULT_FILE_TYPE}`);
     res.end(file);
   } catch (err) {
     console.log(err);
