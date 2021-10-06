@@ -6,6 +6,5 @@ const merge = (a, b) =>
       v === undefined || (typeof v === "number" && isNaN(v)) || v === null ? {} : { [k]: v }
     )
   );
-module.exports = { merge };
-
 const toBoolean = (val) => val === "true";
+module.exports = { merge, toBoolean };
