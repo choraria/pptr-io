@@ -14,8 +14,8 @@ module.exports = async (req, res) => {
         error: "Invalid URL",
       });
     }
-    const fullPage =  req.query.fullPage.toString().toLowerCase() == "true" ? true : false;
-    const screenshotFileType = req.query.type.toString().toLowerCase();
+    const fullPage =  req.query.fullPage ? (req.query.fullPage.toString().toLowerCase() == "true" ? true : false) : false;
+    const screenshotFileType = req.query.type ? req.query.type.toString().toLowerCase() : "png";
     const fileType = ALLOWED_FILE_TYPES.includes(screenshotFileType) ? screenshotFileType : "png";
 
     const browser = await puppeteer.launch({
