@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer-core");
 const chrome = require("chrome-aws-lambda");
-const { merge } = require("../helpers/helpers");
+const { merge, toBoolean } = require("../helpers/helpers");
 
 const DEFAULT_VIEWPORT = { height: 1920, width: 1080, deviceScaleFactor: 1 };
 const ALLOWED_FILE_TYPES = ["jpeg", "webp", "png"];
