@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
     const page = await browser.newPage();
 
     await page.setViewport({
-      width: Number(req.query.width) || 1920,      
+      width: Number(req.query.width) || 1920,
       height: Number(req.query.height) || 1080,
       deviceScaleFactor: Number(req.query.scaleFactor) || 1,
     });
