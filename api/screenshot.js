@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
       });
     }
     const fullPage = toBoolean(req.query.fullPage);
-    const screenshotFileType = req.query.screenshotFileType;
+    const screenshotFileType = req.query.type;
     if (screenshotFileType && !ALLOWED_FILE_TYPES.includes(screenshotFileType)) {
       res.json({
         error: "invalid file type requested",
