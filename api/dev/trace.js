@@ -33,7 +33,7 @@ module.exports = async (req, res) => {
     await browser.close();
 
     res.statusCode = 200;
-    // res.setHeader("Content-Type", `application/json`);
+    res.setHeader("Content-Type", `application/json`);
     const rs = fs.createReadStream(trace);
     res.setHeader("Content-Disposition", `attachment; ${trace}`);
     rs.pipe(res);
