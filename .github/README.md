@@ -92,16 +92,16 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 - api: `https://pptr.io/api/trace?url=https://netflix.com/`
 - source: [trace.js](/api/trace.js)
 
-View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-viewer): https://chromedevtools.github.io/timeline-viewer/ (drag and drop the `trace.json` file on the browser)
+View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-viewer) — https://chromedevtools.github.io/timeline-viewer/ (drag and drop the `trace.json` file on the browser)
 
 # contributing
 
-1. Create a new issue describing what you have in mind.
-    - Challenge / Problem statement
-    - Proposed approach on solution
-2. The repo owner will engage you and help validate the idea
-3. Once everything is agreed upon, feel free to frok the repo and start building your solution
-4. Finally, create a new pull request with the accepted, proposed changes
+1. create a new issue describing what you have in mind.
+    - challenge / problem statement
+    - proposed approach on solution
+2. repo owner will engage you and help validate the idea
+3. once everything is agreed upon, feel free to frok the repo and start building your solution
+4. finally, create a new pull request with the accepted, proposed changes
 
 # credits
 
