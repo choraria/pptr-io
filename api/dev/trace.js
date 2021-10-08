@@ -33,8 +33,11 @@ module.exports = async (req, res) => {
     await browser.close();
 
     res.statusCode = 200;
-    res.setHeader("Content-Type", `application/json`);
-    res.end(fs.readFileSync(trace));
+    // res.setHeader("Content-Type", `application/json`);
+    const rs = fs.createReadStream(trace);
+    res.setHeader("Content-Disposition", `attachment; ${trace}`);
+    rs.pipe(res);
+    // res.end(fs.readFileSync(trace));
   } catch (err) {
     console.log(err);
     res.statusCode = 500;
