@@ -15,6 +15,7 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 - [usage](#usage)
     1. [screenshot](#screenshot)
     2. [metrics](#metrics)
+    3. [trace](#trace)
 - [contributing](#contributing)
 - [credits](#credits)
 - [license](#license)
@@ -82,6 +83,16 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 ```
 
 </details>
+
+### trace
+
+- task: get a timeline trace
+- class: [page.tracing](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagetracing)
+- method: `GET`
+- api: `https://pptr.io/api/trace?url=https://netflix.com/`
+- source: [trace.js](/api/trace.js)
+
+View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-viewer): https://chromedevtools.github.io/timeline-viewer/ (drag and drop the `trace.json` file on the browser)
 
 # contributing
 
