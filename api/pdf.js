@@ -27,6 +27,9 @@ module.exports = async (req, res) => {
     
     const pdf = await page.pdf({
       pageRanges: "1",
+      printBackground: true,
+      landscape: true,
+      format: "A4",
     });
     await browser.close();
 
