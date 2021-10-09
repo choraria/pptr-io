@@ -25,7 +25,9 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 
 # usage
 
-- base url: `https://pptr.io/`
+- base url: 
+    - production: `https://pptr.io/`
+    - preview (staging): `https://dev.pptr.io/`
 - default path: `api/`
 - endpoint: any one of the individual `.js` files in the [api](/api) folder
     - ignore the `index.js` file inside the `api` folder
@@ -130,7 +132,7 @@ View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-v
     - proposed approach on solution
 2. repo owner will engage you and help validate the idea
 3. once everything is agreed upon, feel free to frok the repo and start building your solution
-4. finally, create a new pull request with the accepted, proposed changes
+4. finally, create a new pull request in the [`dev` branch](https://github.com/choraria/pptr-io/tree/dev) with the accepted, proposed changes
 
 # credits
 
