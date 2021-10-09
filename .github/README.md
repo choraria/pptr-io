@@ -16,6 +16,7 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
     1. [screenshot](#screenshot)
     2. [metrics](#metrics)
     3. [trace](#trace)
+    4. [version](#version)
 - [contributing](#contributing)
 - [credits](#credits)
 - [license](#license)
@@ -93,6 +94,25 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 - source: [trace.js](/api/trace.js)
 
 View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-viewer) — https://chromedevtools.github.io/timeline-viewer/ (drag and drop the `trace.json` file on the browser)
+
+### version
+
+- task: fetch browser user agent / chromium version
+- class: [browser.userAgent](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#browseruseragent)
+- method: `GET`
+- api: `https://pptr.io/api/version`
+- source: [version.js](/api/version.js)
+
+<details>
+<summary>sample output of the version endpoint</summary>
+
+```json
+{
+    "version": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4512.0 Safari/537.36"
+}
+```
+
+</details>
 
 # contributing
 
