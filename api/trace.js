@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
     await page.tracing.start({ path: trace, screenshots: true });
 
     await page.goto(url, {
-      waitUntil: "networkidle2",
+      waitUntil: "networkidle0",
     });
 
     await page.tracing.stop();

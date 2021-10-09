@@ -24,12 +24,15 @@ module.exports = async (req, res) => {
     await page.goto(url, {
       waitUntil: "networkidle0",
     });
-    const metrics = await page.metrics();
+    
+    const pdf = await page.pdf({
+      pageRanges: "1",
+    });
     await browser.close();
 
     res.statusCode = 200;
-    res.setHeader("Content-Type", `application/json`);
-    res.end(JSON.stringify(metrics));
+    res.setHeader("Content-Type", `application/pdf`);
+    res.end(pdf);
   } catch (err) {
     console.log(err);
     res.statusCode = 500;

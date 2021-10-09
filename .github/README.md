@@ -16,7 +16,8 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
     1. [screenshot](#screenshot)
     2. [metrics](#metrics)
     3. [trace](#trace)
-    4. [version](#version)
+    4. [pdf](#pdf)
+    5. [version](#version)
 - [contributing](#contributing)
 - [credits](#credits)
 - [license](#license)
@@ -93,7 +94,15 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 - api: `https://pptr.io/api/trace?url=https://netflix.com/`
 - source: [trace.js](/api/trace.js)
 
-View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-viewer) — https://chromedevtools.github.io/timeline-viewer/ (drag and drop the `trace.json` file on the browser)
+View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-viewer) — [chromedevtools.github.io/timeline-viewer](https://chromedevtools.github.io/timeline-viewer/) (drag and drop the `trace.json` file on the browser)
+
+### pdf
+
+- task: render page as a pdf
+- class: [page.pdf](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagepdfoptions)
+- method: `GET`
+- api: `https://pptr.io/api/pdf?url=https://dev.to/`
+- source: [pdf.js](/api/pdf.js)
 
 ### version
 
