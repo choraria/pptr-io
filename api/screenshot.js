@@ -13,6 +13,7 @@ module.exports = async (req, res) => {
       res.json({
         error: "Invalid URL",
       });
+      res.end();
     }
     const fullPage =  req.query.fullPage ? (req.query.fullPage.toString().toLowerCase() == "true" ? true : false) : false;
     const screenshotFileType = req.query.type ? req.query.type.toString().toLowerCase() : "png";
@@ -50,5 +51,6 @@ module.exports = async (req, res) => {
     res.json({
       error: err.toString(),
     });
+    res.end();
   }
 };

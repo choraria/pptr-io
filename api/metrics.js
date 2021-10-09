@@ -11,6 +11,7 @@ module.exports = async (req, res) => {
       res.json({
         error: "Invalid URL",
       });
+      res.end();
     }
 
     const browser = await puppeteer.launch({
@@ -36,5 +37,6 @@ module.exports = async (req, res) => {
     res.json({
       error: err.toString(),
     });
+    res.end();
   }
 };

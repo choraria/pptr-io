@@ -14,4 +14,5 @@ module.exports = async (req, res) => {
   res.json({
     version: userAgent.toString(),
   });
+  res.end();
 }
