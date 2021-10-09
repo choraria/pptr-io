@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
     const page = await browser.newPage();
 
     await page.goto(url, {
-      waitUntil: "networkidle0",
+      // waitUntil: "networkidle0",
     });
     const metrics = await page.metrics();
     await browser.close();
