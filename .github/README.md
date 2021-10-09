@@ -17,7 +17,8 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
     2. [metrics](#metrics)
     3. [trace](#trace)
     4. [pdf](#pdf)
-    5. [version](#version)
+    5. [meta](#meta)
+    6. [version](#version)
 - [contributing](#contributing)
 - [credits](#credits)
 - [license](#license)
@@ -105,6 +106,38 @@ View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-v
 - method: `GET`
 - api: `https://pptr.io/api/pdf?url=https://netflix.com`
 - source: [pdf.js](/api/pdf.js)
+
+### meta
+
+- task: fetch meta tag data from a website
+- method: `GET`
+- api: `https://pptr.io/api/meta?url=https://vercel.com`
+- source: [meta.js](/api/meta.js)
+
+<details>
+<summary>sample output of the meta endpoint</summary>
+
+```json
+{
+    "charset": "utf-8",
+    "viewport": "width=device-width, initial-scale=1.0",
+    "Content-Language": "en",
+    "twitter:card": "summary_large_image",
+    "twitter:site": "@vercel",
+    "twitter:image": "https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png",
+    "og:title": "Develop. Preview. Ship. For the best frontend teams – Vercel",
+    "og:url": "https://vercel.com/",
+    "description": "Deploy web projects with the best frontend developer experience and highest end-user performance.",
+    "og:description": "Deploy web projects with the best frontend developer experience and highest end-user performance.",
+    "og:image": "https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png",
+    "apple-mobile-web-app-title": "Vercel",
+    "theme-color": "#000",
+    "msapplication-TileColor": "#000000",
+    "next-head-count": "35"
+}
+```
+
+</details>
 
 ### version
 
