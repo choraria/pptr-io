@@ -24,7 +24,10 @@ module.exports = async (req, res) => {
     await page.goto(url, {
       waitUntil: "networkidle2",
     });
-    const pdf = await page.pdf();
+    // await page.emulateMediaType('screen');
+    const pdf = await page.pdf({
+      pageRanges: "1",
+    });
     await browser.close();
 
     res.statusCode = 200;
