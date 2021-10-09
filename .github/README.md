@@ -137,6 +137,8 @@ View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-v
 }
 ```
 
+</details>
+
 ### version
 
 - task: fetch browser user agent / chromium version
