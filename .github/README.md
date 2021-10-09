@@ -39,7 +39,7 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 - task: takes a screenshot of the input url
 - class: [page.screenshot](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagescreenshotoptions)
 - method: `GET`
-- api: `https://pptr.io/api/screenshot?url=https://google.com/`
+- api: `https://pptr.io/api/screenshot?url=https://dev.to`
 - source: [screenshot.js](/api/screenshot.js)
 
 | optional params | type | description | default |
@@ -53,7 +53,7 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 <details>
 <summary>sample output of the screenshot endpoint</summary>
 
-![screenshot](https://pptr.io/api/screenshot?url=https://google.com/)
+![screenshot](https://pptr.io/api/screenshot?url=https://dev.to)
 
 </details>
 
@@ -62,7 +62,7 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 - task: fetch metrics of the page
 - class: [page.metrics](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagemetrics)
 - method: `GET`
-- api: `https://pptr.io/api/metrics?url=https://google.com/`
+- api: `https://pptr.io/api/metrics?url=https://script.gs`
 - source: [metrics.js](/api/metrics.js)
 
 <details>
@@ -93,7 +93,7 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 - task: get a timeline trace
 - class: [page.tracing](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagetracing)
 - method: `GET`
-- api: `https://pptr.io/api/trace?url=https://netflix.com/`
+- api: `https://pptr.io/api/trace?url=https://script.gs`
 - source: [trace.js](/api/trace.js)
 
 View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-viewer) — [chromedevtools.github.io/timeline-viewer](https://chromedevtools.github.io/timeline-viewer/) (drag and drop the `trace.json` file on the browser)
@@ -103,7 +103,7 @@ View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-v
 - task: render page as a pdf
 - class: [page.pdf](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagepdfoptions)
 - method: `GET`
-- api: `https://pptr.io/api/pdf?url=https://dev.to/`
+- api: `https://pptr.io/api/pdf?url=https://netflix.com`
 - source: [pdf.js](/api/pdf.js)
 
 ### version
