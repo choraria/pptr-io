@@ -22,9 +22,9 @@ module.exports = async (req, res) => {
     const page = await browser.newPage();
 
     await page.goto(url, {
-      waitUntil: "networkidle2",
+      waitUntil: "networkidle0",
     });
-    await page.emulateMediaType('screen');
+    
     const pdf = await page.pdf({
       pageRanges: "1",
     });

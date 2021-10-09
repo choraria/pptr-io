@@ -33,7 +33,7 @@ module.exports = async (req, res) => {
     });
 
     await page.goto(url, {
-      waitUntil: "networkidle2",
+      waitUntil: "networkidle0",
     });
     const file = await page.screenshot({
       type: fileType,
