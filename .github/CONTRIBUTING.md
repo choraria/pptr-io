@@ -15,4 +15,4 @@ Use the table of contents icon on the top left corner of the this document to ge
     - Proposed approach on solution
 2. The repo owner will engage you and help validate the idea
 3. Once everything is agreed upon, feel free to frok the repo and start building your solution
-4. Finally, create a new pull request with the accepted, proposed changes
+4. finally, create a new pull request in the [`dev` branch](https://github.com/choraria/pptr-io/tree/dev) with the accepted, proposed changes
