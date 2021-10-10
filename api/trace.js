@@ -4,16 +4,7 @@ const fs = require("fs");
 
 module.exports = async (req, res) => {
   try {
-    let url;
-    try {
-      url = new URL({ toString: () => req.query.url });
-    } catch (e) {
-      res.statusCode = 400;
-      res.json({
-        error: "Invalid URL",
-      });
-      res.end();
-    }
+    const url = req.query.url;
 
     const browser = await puppeteer.launch({
       args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
@@ -22,7 +13,7 @@ module.exports = async (req, res) => {
       ignoreHTTPSErrors: true,
     });
     const page = await browser.newPage();
-    const trace = `/tmp/trace-${url.hostname}.json`;
+    const trace = `/tmp/trace-${new URL(url).hostname}.json`;
     await page.tracing.start({ path: trace, screenshots: true });
 
     await page.goto(url, {

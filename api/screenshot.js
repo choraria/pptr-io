@@ -5,16 +5,8 @@ const ALLOWED_FILE_TYPES = ["jpeg", "webp", "png"];
 
 module.exports = async (req, res) => {
   try {
-    let url;
-    try {
-      url = new URL({ toString: () => req.query.url });
-    } catch (e) {
-      res.statusCode = 400;
-      res.json({
-        error: "Invalid URL",
-      });
-      res.end();
-    }
+    const url = req.query.url;
+    
     const fullPage =  req.query.fullPage ? (req.query.fullPage.toString().toLowerCase() == "true" ? true : false) : false;
     const screenshotFileType = req.query.type ? req.query.type.toString().toLowerCase() : "png";
     const fileType = ALLOWED_FILE_TYPES.includes(screenshotFileType) ? screenshotFileType : "png";

@@ -3,17 +3,8 @@ const chrome = require("chrome-aws-lambda");
 
 module.exports = async (req, res) => {
   try {
-    let url;
-    try {
-      url = new URL({ toString: () => req.query.url });
-    } catch (e) {
-      res.statusCode = 400;
-      res.json({
-        error: "Invalid URL",
-      });
-      res.end();
-    }
-
+    const url = req.query.url;
+    
     const browser = await puppeteer.launch({
       args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
       defaultViewport: chrome.defaultViewport,
