@@ -15,4 +15,4 @@ module.exports = async (req, res) => {
     version: userAgent.toString(),
   });
   res.end();
-}
+};

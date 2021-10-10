@@ -18,7 +18,8 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
     3. [trace](#trace)
     4. [pdf](#pdf)
     5. [meta](#meta)
-    6. [version](#version)
+    6. [duckduckgo_profiles](#duckduckgo_profiles)
+    7. [version](#version)
 - [contributing](#contributing)
 - [credits](#credits)
 - [license](#license)
@@ -134,6 +135,32 @@ View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-v
     "theme-color": "#000",
     "msapplication-TileColor": "#000000",
     "next-head-count": "35"
+}
+```
+
+</details>
+
+### duckduckgo_profiles
+
+- task: retrieve the ["about" profiles links](https://user-images.githubusercontent.com/37455462/136704745-afe6cdca-ae73-47e4-a09c-6bc405894af3.png) (website, twitter, facebook, instagram, youtube etc.) of a search query from duckduckgo
+- method: `GET`
+- api: `https://pptr.io/api/duckduckgo_profiles?search=taylor+swift`
+- source: [duckduckgo_profiles.js](/api/duckduckgo_profiles.js)
+
+<details>
+<summary>sample output of the duckduckgo_profiles endpoint</summary>
+
+```json
+{
+    "Website": "https://taylorswift.com",
+    "Wikipedia": "https://en.wikipedia.org/wiki/Taylor_Swift",
+    "Twitter": "https://twitter.com/taylorswift13",
+    "Instagram": "https://instagram.com/taylorswift",
+    "Facebook": "https://facebook.com/TaylorSwift",
+    "Spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02",
+    "IMDb": "https://www.imdb.com/name/nm2357847",
+    "YouTube": "https://youtube.com/channel/UCqECaJ8Gagnn7YCbPEzWH6g",
+    "SoundCloud": "https://soundcloud.com/taylorswiftofficial"
 }
 ```
 
