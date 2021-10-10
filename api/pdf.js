@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
     await page.goto(url, {
       waitUntil: "networkidle0",
     });
-    
+
     const pdf = await page.pdf({
       pageRanges: "1",
       printBackground: true,
