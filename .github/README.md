@@ -142,7 +142,7 @@ View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-v
 
 ### duckduckgo_profiles
 
-- task: retrieve the "about" profiles links (website, twitter, facebook, instagram, youtube etc.) of a search query from duckduckgo
+- task: retrieve the ["about" profiles links](https://user-images.githubusercontent.com/37455462/136704745-afe6cdca-ae73-47e4-a09c-6bc405894af3.png) (website, twitter, facebook, instagram, youtube etc.) of a search query from duckduckgo
 - method: `GET`
 - api: `https://pptr.io/api/duckduckgo_profiles?search=taylor+swift`
 - source: [duckduckgo_profiles.js](/api/duckduckgo_profiles.js)
