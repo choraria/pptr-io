@@ -44,7 +44,7 @@ module.exports = async (req, res) => {
       pageRanges: "1",
       printBackground: true,
       landscape: landscape,
-      format: !format && !width && !height ? "Letter" : undefined,
+      format: format !== undefined ? format : (!format && !width && !height ? "Letter" : undefined),
       height: height,
       width: width, 
       scale: scale
