@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
 
     const scale = req.query.scale ? (Number(req.query.scale) <= 2 && Number(req.query.scale) >= 0.1 ? Number(req.query.scale) : 1) : 1;
     const landscape = req.query.landscape ? (req.query.landscape.toString().toLowerCase() === "true" ? true : false) : false;
-    const format = ALLOWED_FORMATS.includes(req.query.format?.toString()) ? req.query.format.toString() : "Letter";
+    const format = ALLOWED_FORMATS.includes(req.query.format?.toString()) ? req.query.format.toString() : undefined;
 
     const widthRaw = req.query.width?.split(/([0-9.]+)/)?.filter(s => s !== "");
     let width;
@@ -44,7 +44,7 @@ module.exports = async (req, res) => {
       pageRanges: "1",
       printBackground: true,
       landscape: landscape,
-      format: format,
+      format: !format && !width && !height ? "Letter" : undefined,
       height: height,
       width: width, 
       scale: scale
