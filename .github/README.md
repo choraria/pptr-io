@@ -110,11 +110,11 @@ View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-v
 
 | optional params | type | description | default |
 | --- | --- | --- | --- |
-| `scale` | 0.1<=number<=2 | scale of webpage rendering | `1` |
+| `scale` | number | scale of webpage rendering. must be between 0.1 and 2. | `1` |
 | `landscape` | boolean | when `true`, the orientation of the paper is in landscape mode. | `false` |
 | `format` | string | overrides width/height and can be any of `Letter`, `Legal`, `Tabloid`, `Ledger`, `A0`, `A1`, `A2`, `A3`, `A4`, `A5` or `A6`. | `Letter` |
-| `width` | number\|string | width of the paper, units allowed are `px`, `in`, `cm` and `mm`. | `null` |
-| `height` | number\|string | height of the paper, units allowed are `px`, `in`, `cm` and `mm`. | `null` |
+| `width` | number \| string | width of the paper, units allowed are `px`, `in`, `cm` and `mm`. | `null` |
+| `height` | number \| string | height of the paper, units allowed are `px`, `in`, `cm` and `mm`. | `null` |
 
 ### meta
 
