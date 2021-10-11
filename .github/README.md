@@ -12,16 +12,14 @@ a free and open-source api that runs [puppeteer](https://developers.google.com/w
 
 # table of contents
 
-- [table of contents](#table-of-contents)
 - [usage](#usage)
-  - [endpoints](#endpoints)
-    - [screenshot](#screenshot)
-    - [metrics](#metrics)
-    - [trace](#trace)
-    - [pdf](#pdf)
-    - [meta](#meta)
-    - [duckduckgo_profiles](#duckduckgo_profiles)
-    - [version](#version)
+    1. [screenshot](#screenshot)
+    2. [metrics](#metrics)
+    3. [trace](#trace)
+    4. [pdf](#pdf)
+    5. [meta](#meta)
+    6. [duckduckgo_profiles](#duckduckgo_profiles)
+    7. [version](#version)
 - [contributing](#contributing)
 - [credits](#credits)
 - [license](#license)
@@ -112,12 +110,11 @@ View the trace in [timeline-viewer](https://github.com/ChromeDevTools/timeline-v
 
 | optional params | type | description | default |
 | --- | --- | --- | --- |
-| `width` | number\|string | width of the paper, units allowed are `px`, `in`, `cm` and `mm` where default is `px`. | `1920` |
-| `height` | number\|string | height of the paper, units allowed are `px`, `in`, `cm` and `mm` where default is `px` | `1080` |
-| `scale` | 0.1<=number<=2> | scale of webpage rendering | `1` |
+| `scale` | 0.1<=number<=2 | scale of webpage rendering | `1` |
 | `landscape` | boolean | when `true`, the orientation of the paper is in landscape mode. | `false` |
-| `printBackground` | boolean | when `true`, the background graphics of the page are printed as well. | `false` |
 | `format` | string | overrides width/height and can be any of `Letter`, `Legal`, `Tabloid`, `Ledger`, `A0`, `A1`, `A2`, `A3`, `A4`, `A5` or `A6`. | `Letter` |
+| `width` | number\|string | width of the paper, units allowed are `px`, `in`, `cm` and `mm`. | `null` |
+| `height` | number\|string | height of the paper, units allowed are `px`, `in`, `cm` and `mm`. | `null` |
 
 ### meta
 
