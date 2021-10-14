@@ -16,7 +16,7 @@ module.exports = async (req: VercelRequest, res: VercelResponse) => {
 
     await page.goto(url);
 
-    const metaData: { [key: string]: string } = await page.evaluate(() => {
+    const metaData: { [key: string]: string } = await page.evaluate((): { [key: string]: string } => {
       const data: { [key: string]: string } = {};
       const metaTags: NodeListOf<HTMLMetaElement> = document.querySelectorAll("meta");
       metaTags.forEach((tag: HTMLMetaElement, i: number) => {

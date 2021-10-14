@@ -1,24 +1,25 @@
-const puppeteer = require("puppeteer-core");
-const chrome = require("chrome-aws-lambda");
+import puppeteer from "puppeteer-core";
+import chrome from "chrome-aws-lambda";
+import { VercelRequest, VercelResponse } from "@vercel/node";
 
-module.exports = async (req, res) => {
+module.exports = async (req: VercelRequest, res: VercelResponse) => {
   try {
-    const search = req.query.search;
-    const url = `https://duckduckgo.com/?q=${search}`;
+    const search = req.query.search as string;
+    const url: string = `https://duckduckgo.com/?q=${search}`;
 
-    const browser = await puppeteer.launch({
+    const browser: puppeteer.Browser = await puppeteer.launch({
       args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
       defaultViewport: chrome.defaultViewport,
       executablePath: await chrome.executablePath,
       ignoreHTTPSErrors: true,
     });
-    const page = await browser.newPage();
+    const page: puppeteer.Page = await browser.newPage();
 
     await page.goto(url);
 
-    const profiles = await page.$$eval(".about-profiles__link", (items) => {
-      const data = {};
-      items.forEach((item) => {
+    const profiles: { [key: string]: string } = await page.$$eval(".about-profiles__link", (items: Element[]): { [key: string]: string } => {
+      const data: { [key: string]: string } = {};
+      items.forEach((item: Element): void => {
         data[item.getAttribute("title")] = item.getAttribute("href");
       });
       return Object.keys(data).length !== 0 ? data : { message: "No profiles found" };
