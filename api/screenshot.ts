@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer-core";
 import chrome from "chrome-aws-lambda";
-import { VercelRequest, VercelResponse } from "@vercel/node"
+import { VercelRequest, VercelResponse } from "@vercel/node";
 
 const ALLOWED_FILE_TYPES = ["jpeg", "webp", "png"] as const;
 type ALLOWED_FILE_TYPES = typeof ALLOWED_FILE_TYPES[number];
@@ -8,7 +8,6 @@ type ALLOWED_FILE_TYPES = typeof ALLOWED_FILE_TYPES[number];
 module.exports = async (req: VercelRequest, res: VercelResponse): Promise<void> => {
   try {
     const url = req.query.url as string;
-
     const fullPage: boolean = req.query.fullPage ? (req.query.fullPage.toString().toLowerCase() === "true" ? true : false) : false;
     const screenshotFileType: string = req.query.type ? req.query.type.toString?.().toLowerCase() : "png";
     const fileType: ALLOWED_FILE_TYPES = ALLOWED_FILE_TYPES.includes(screenshotFileType as ALLOWED_FILE_TYPES) ? screenshotFileType as ALLOWED_FILE_TYPES : "png";
