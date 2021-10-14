@@ -1,12 +1,12 @@
 {
   "dependencies": {
+    "@vercel/node": "^1.12.1",
     "chrome-aws-lambda": "^10.1.0",
     "puppeteer-core": "^10.4.0"
   },
   "name": "pptr-io",
   "description": "puppeteer as a service.",
   "version": "1.0.0",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/choraria/pptr-io.git"
