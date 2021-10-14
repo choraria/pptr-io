@@ -1,20 +1,21 @@
-const puppeteer = require("puppeteer-core");
-const chrome = require("chrome-aws-lambda");
+import puppeteer from "puppeteer-core";
+import chrome from "chrome-aws-lambda";
+import { VercelRequest, VercelResponse } from "@vercel/node";
 
-module.exports = async (req, res) => {
+module.exports = async (req: VercelRequest, res: VercelResponse) => {
   try {
-    const url = req.query.url;
+    const url = req.query.url as string;
 
-    const browser = await puppeteer.launch({
+    const browser: puppeteer.Browser = await puppeteer.launch({
       args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
       defaultViewport: chrome.defaultViewport,
       executablePath: await chrome.executablePath,
       ignoreHTTPSErrors: true,
     });
-    const page = await browser.newPage();
+    const page: puppeteer.Page = await browser.newPage();
 
     await page.goto(url);
-    const metrics = await page.metrics();
+    const metrics: puppeteer.Metrics = await page.metrics();
     await browser.close();
 
     res.statusCode = 200;
