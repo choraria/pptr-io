@@ -1,19 +1,19 @@
-const puppeteer = require("puppeteer-core");
-const chrome = require("chrome-aws-lambda");
-const fs = require("fs");
+import puppeteer from "puppeteer-core";
+import chrome from "chrome-aws-lambda";
+import fs from "fs";
+import { VercelRequest, VercelResponse } from "@vercel/node";
 
-module.exports = async (req, res) => {
+module.exports = async (req: VercelRequest, res: VercelResponse) => {
   try {
-    const url = req.query.url;
-
-    const browser = await puppeteer.launch({
+    const url = req.query.url as string;
+    const browser: puppeteer.Browser = await puppeteer.launch({
       args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
       defaultViewport: chrome.defaultViewport,
       executablePath: await chrome.executablePath,
       ignoreHTTPSErrors: true,
     });
-    const page = await browser.newPage();
-    const trace = `/tmp/trace-${new URL(url).hostname}.json`;
+    const page: puppeteer.Page = await browser.newPage();
+    const trace: string = `/tmp/trace-${new URL(url).hostname}.json`;
     await page.tracing.start({ path: trace, screenshots: true });
 
     await page.goto(url, {
@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
     await browser.close();
 
     res.statusCode = 200;
-    const rs = fs.createReadStream(trace);
+    const rs: fs.ReadStream = fs.createReadStream(trace);
     res.setHeader("Content-Type", `application/json`);
     res.setHeader("Content-Disposition", `attachment; ${trace}`);
     rs.pipe(res);
