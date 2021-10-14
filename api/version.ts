@@ -2,7 +2,7 @@ import puppeteer from "puppeteer-core";
 import chrome from "chrome-aws-lambda";
 import { VercelRequest, VercelResponse } from "@vercel/node";
 
-module.exports = async (req: VercelRequest, res: VercelResponse) => {
+module.exports = async (req: VercelRequest, res: VercelResponse): Promise<void> => {
   const browser: puppeteer.Browser = await puppeteer.launch({
     args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
     defaultViewport: chrome.defaultViewport,

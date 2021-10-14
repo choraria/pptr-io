@@ -7,7 +7,7 @@ type ALLOWED_FORMAT = typeof ALLOWED_FORMATS[number];
 const ALLOWED_UNITS = ["px", "in", "cm", "mm"] as const;
 type ALLOWED_UNIT = typeof ALLOWED_UNITS[number];
 
-module.exports = async (req: VercelRequest, res: VercelResponse) => {
+module.exports = async (req: VercelRequest, res: VercelResponse): Promise<void> => {
   try {
     const url = req.query.url as string;
 

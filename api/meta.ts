@@ -2,7 +2,7 @@ import puppeteer, { Page } from "puppeteer-core";
 import chrome from "chrome-aws-lambda";
 import { VercelRequest, VercelResponse } from "@vercel/node";
 
-module.exports = async (req: VercelRequest, res: VercelResponse) => {
+module.exports = async (req: VercelRequest, res: VercelResponse): Promise<void> => {
   try {
     const url = req.query.url as string;
 
