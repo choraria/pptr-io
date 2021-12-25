@@ -14,13 +14,15 @@ module.exports = async (req, res) => {
     const page = await browser.newPage();
     const url = `https://www.instagram.com/${username}/?__a=1`;
 
-    const data = await page.goto(url);
+    await page.goto(url);
+
+    const data = await page.content();
 
     await browser.close();
 
     res.statusCode = 200;
     res.setHeader("Content-Type", `application/json`);
-    res.end(data);
+    res.end(JSON.stringify(data));
   } catch (err) {
     console.log(err);
     res.statusCode = 500;
